@@ -1,0 +1,7 @@
+return { 
+  "akinsho/toggleterm.nvim",
+  tag = "*",
+  keys = {
+    { "<leader>td", "<cmd>ToggleTerm size=40 dir=~ direction=horizontal<cr>", "Open Horizontal terminal in home directory"}
+  }
+}
