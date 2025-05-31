@@ -1,0 +1,6 @@
+---
+- name: Todoist
+  community.general.flatpak:
+    name: com.todoist.Todoist
+    state: present
+    method: user

@@ -1,0 +1,10 @@
+---
+# Setup things for my NocFree Keyboard
+- name: Setup UDEV NocFree
+  become: true
+  copy:
+    dest: /etc/udev/rules.d/99-vial.rules
+    owner: root
+    group: root
+    content: 'KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{serial}=="*vial:f64c2b3c*", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl"'
+    mode: '0644'

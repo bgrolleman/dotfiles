@@ -1,0 +1,8 @@
+
+    - name: Communication
+      apt:
+        name:
+          - discord
+# Let's fix Discord Auto updating, because it's a pain
+# https://github.com/FlorianHegele/AutoUpdateDiscord
+# /

@@ -1,0 +1,20 @@
+---
+- name: Setup my personal Desktop
+  hosts: localhost
+  tasks:
+    - name: Include Elements
+      ansible.builtin.include_tasks: "{{ item }}"
+      loop:
+        - tasks/base_packages.yml
+        - tasks/todoist.yml
+        - tasks/nocfree.yml
+        - tasks/discord.yml
+
+
+
+# Todo - Setup Brave and install
+# Todo - Prep for Resolve 
+#
+
+      
+

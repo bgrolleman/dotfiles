@@ -1,0 +1,17 @@
+---
+- name: Install base packages
+  become: true
+  apt:
+    name:
+      - ansible
+      - vim
+      - git
+      - tmux
+
+- name: Capture Tools
+  become: true
+  apt:
+    name:
+      - flameshot
+      - peek
+      - obs-studio
