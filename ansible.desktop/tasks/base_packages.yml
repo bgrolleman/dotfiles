@@ -7,6 +7,14 @@
       - vim
       - git
       - tmux
+      - kitty
+
+- name: Install i3 packages
+  become: true
+  apt:
+    name:
+      - i3
+      - polybar
 
 - name: Capture Tools
   become: true
