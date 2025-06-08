@@ -16,6 +16,14 @@
       - i3
       - polybar
 
+- name: Development Environment
+  become: true
+  apt:
+    name:
+      - build-essential
+      - ninja-build
+      - luarocks
+
 - name: Capture Tools
   become: true
   apt:
