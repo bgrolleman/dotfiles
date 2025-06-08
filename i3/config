@@ -61,6 +61,7 @@ bindcode $mod+65 exec "rofi -show window"
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
+bindsym $win+l exec "i3lock -i ~/Documents/Resources/Backgrounds/51202139522_fbf4788f42_o.png"
 
 # change focus
 bindsym $mod+j focus left
@@ -184,3 +185,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+default_border normal 5px
+# This needs a newer verison of i3 then I have on my desktop right now
+#gaps inner 5px
