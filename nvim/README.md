@@ -46,7 +46,8 @@ Seems to be working, but not sure how to use it yet. But in the base it's typing
 and then just pressing enter. If this thing does a co-pilot call whenever I'm
 typing, then I suddenly understand why we have such high energy bills.
 
-### Keyboard keys to remember
+### LSP Keys
 
 - =g Cleanup code
 - K Get hover definition
+- gr (anything)
