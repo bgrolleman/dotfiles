@@ -29,3 +29,11 @@ fi
 #if [ -n "$PS1" ] && [ -z "$TMUX" ] && [ -z "$SSH_TTY" ] && [ -t 1 ]; then
 #  tmux attach-session -t main || tmux new-session -s main
 #fi
+
+# Load my SSH Agent and Key
+if [ -n "$PS1" ] && [ -z "$SSH_TTY" ] && [ -t 1 ]; then
+  keychain ~/.ssh/bgrolleman_2024.ed25519
+  source ~/.keychain/laura-sh
+fi
+
+alias notes="tmux attach-session -t notes || tmux new-session -s notes 'nvim ~/Notes/Personal'"

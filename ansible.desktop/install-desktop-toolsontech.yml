@@ -6,9 +6,11 @@
       ansible.builtin.include_tasks: "{{ item }}"
       loop:
         - tasks/base_packages.yml
+        - tasks/flatpak.yml
         - tasks/todoist.yml
         - tasks/nocfree.yml
         - tasks/discord.yml
+        - tasks/steam.yml
 
 
 

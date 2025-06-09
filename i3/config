@@ -189,3 +189,8 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 default_border normal 5px
 # This needs a newer verison of i3 then I have on my desktop right now
 #gaps inner 5px
+
+# Turn off my screen after 10 min of in-activity
+exec --no-startup-id xset dpms 600
+exec --no-startup-id /usr/bin/blueman-applet
+
