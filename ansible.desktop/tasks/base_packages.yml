@@ -17,6 +17,10 @@
       - polybar
       - keychain
       - rofi
+      - nitrogen
+      - playerctl
+      - blueman
+      - pavucontrol
 
 - name: Development Environment
   become: true

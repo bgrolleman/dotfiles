@@ -31,9 +31,9 @@ fi
 #fi
 
 # Load my SSH Agent and Key
-if [ -n "$PS1" ] && [ -z "$SSH_TTY" ] && [ -t 1 ]; then
+if [ -n "$PS1" ]; then
   keychain ~/.ssh/bgrolleman_2024.ed25519
-  source ~/.keychain/laura-sh
+  source ~/.keychain/Laura-sh
 fi
 
 alias notes="tmux attach-session -t notes || tmux new-session -s notes 'nvim ~/Notes/Personal'"
