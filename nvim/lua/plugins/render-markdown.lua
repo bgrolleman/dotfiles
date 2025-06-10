@@ -15,6 +15,9 @@ return {
       checkbox = {
         enabled = true,
       },
+      wikilinks = {
+        enabled = true,
+      },
     })
   end,
 }

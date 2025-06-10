@@ -7,6 +7,28 @@
       - vim
       - git
       - tmux
+      - kitty
+
+- name: Install i3 packages
+  become: true
+  apt:
+    name:
+      - i3
+      - polybar
+      - keychain
+      - rofi
+      - nitrogen
+      - playerctl
+      - blueman
+      - pavucontrol
+
+- name: Development Environment
+  become: true
+  apt:
+    name:
+      - build-essential
+      - ninja-build
+      - luarocks
 
 - name: Capture Tools
   become: true
@@ -15,3 +37,10 @@
       - flameshot
       - peek
       - obs-studio
+
+- name: Brave Browser
+  become: true
+  ansible.builtin.shell: 'curl -fsS https://dl.brave.com/install.sh | sh'
+  args:
+    creates: /usr/bin/brave-browser
+

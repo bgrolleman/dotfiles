@@ -14,8 +14,15 @@ link() {
     ln -s "$2" "$1"
   fi
 }
+configlink() {
+  link ~/.config/$1 ~/dotfiles/$1
+}
 
 checkdir ~/.config
 link ~/.dotfiles ~/dotfiles
-link ~/.config/tmux ~/dotfiles/tmux
-link ~/.config/nvim ~/dotfiles/nvim
+link ~/.profile ~/dotfiles/profile
+link ~/.config/i3 ~/dotfiles/i3
+
+configlink tmux
+configlink nvim
+configlink kitty

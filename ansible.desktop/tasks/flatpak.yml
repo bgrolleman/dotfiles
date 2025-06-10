@@ -1,0 +1,5 @@
+- name: Setup Flatpak
+  become: true
+  apt:
+    name:
+      - flatpak

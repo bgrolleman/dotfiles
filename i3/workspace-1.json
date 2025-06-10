@@ -1,0 +1,55 @@
+// vim:ts=4:sw=4:et
+{
+    // splith split container with 3 children
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splith",
+    "marks": [],
+    "percent": 1,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "none",
+            "current_border_width": 5,
+            "floating": "user_off",
+            "marks": [],
+            "name": "Todoist - Today – Todoist",
+            "percent": 0.20,
+            "swallows": [
+               {
+               "instance": "^crx_knaiokfnmjjldlfhlioejgcompgenfhb$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "normal",
+            "current_border_width": 2,
+            "floating": "user_off",
+            "marks": [],
+            "name": "i3: Layout saving in i3 - Brave",
+            "percent": 0.60,
+            "swallows": [
+               {
+                "instance": "^brave\\-browser$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "normal",
+            "current_border_width": 5,
+            "floating": "auto_off",
+            "marks": [],
+            "name": "bgrolleman@laura: ~",
+            "percent": 0.20,
+            "swallows": [
+               {
+                "class": "^kitty$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+

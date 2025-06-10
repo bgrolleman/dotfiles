@@ -1,8 +1,13 @@
+---
 
-    - name: Communication
-      apt:
-        name:
-          - discord
-# Let's fix Discord Auto updating, because it's a pain
-# https://github.com/FlorianHegele/AutoUpdateDiscord
-# /
+- name: Install AutoUpdateDiscord
+  become: true
+  ansible.builtin.git:
+    repo: 'https://github.com/FlorianHegele/AutoUpdateDiscord'
+    dest: /opt/AutoUpdateDiscord
+
+- name: Install/Update Discord
+  become: true
+  ansible.builtin.shell: 'bash /opt/AutoUpdateDiscord/update_discord.sh'
+  args:
+    creates: /usr/bin/Discord

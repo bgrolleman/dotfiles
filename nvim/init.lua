@@ -1,3 +1,5 @@
+print("advent of neovim")
+
 require("config.lazy")
 --
 -- local o = vim.opt
@@ -13,8 +15,10 @@ require("config.lazy")
 --
 -- nvim_create_user_command("InsertTodayHeader", ':pu=strftime("# %a %d %b %Y")', {})
 --
+vim.opt.compatible = false
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "v:lua.MyCustomFoldExpr()"
+vim.diagnostic.config({ virtual_text = true })
 
 function _G.MyCustomFoldExpr()
   local line = vim.fn.getline(vim.v.lnum)
