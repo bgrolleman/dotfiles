@@ -1,0 +1,53 @@
+// vim:ts=4:sw=4:et
+{
+    "marks": [],
+    "name": "YouTube Music",
+    "percent": 0.25,
+    "swallows": [
+       {
+       "class": "^Brave\\-browser$",
+       "instance": "^crx_cinhimbnkkaeohfgghhklpknlkffjgod$",
+       "title": "^YouTube\\ Music$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "marks": [],
+    "name": "WhatsApp Web",
+    "percent": 0.25,
+    "swallows": [
+       {
+       "class": "^Brave\\-browser$",
+       "instance": "^crx_hnpfjngllnobngcgfapefoaidbinmjnm$",
+       "title": "^WhatsApp\\ Web$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "marks": [],
+    "name": "WhatsApp Web",
+    "percent": 0.25,
+    "swallows": [
+       {
+       "class": "^Brave\\-browser$",
+       "instance": "^crx_hnpfjngllnobngcgfapefoaidbinmjnm$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "marks": [],
+    "name": "Friends - Discord",
+    "percent": 0.25,
+    "swallows": [
+       {
+       "class": "^discord$"
+       }
+    ],
+    "type": "con"
+}

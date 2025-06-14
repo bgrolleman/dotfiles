@@ -21,6 +21,7 @@
       - playerctl
       - blueman
       - pavucontrol
+      - picom
 
 - name: Development Environment
   become: true
@@ -44,3 +45,8 @@
   args:
     creates: /usr/bin/brave-browser
 
+- name: Streamdeck
+  community.general.flatpak:
+    name: com.core447.StreamController
+    state: present
+    method: user
