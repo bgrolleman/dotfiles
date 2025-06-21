@@ -207,6 +207,7 @@ exec --no-startup-id nitrogen --restore
 exec --no-startup-id greenclip deamon
 exec --no-startup-id flatpak run com.core447.StreamController -b
 exec --no-startup-id picom
+exec --no-startup-id ~/bin/stack-v5.3.1-20240731-x86_64.AppImage
 
 bindsym $win+period exec flatpak run it.mijorus.smile
 
