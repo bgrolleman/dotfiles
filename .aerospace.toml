@@ -98,12 +98,13 @@ outer.right =      5
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#exec-and-forget
 # You can uncomment the following lines to open up terminal with alt + enter shortcut (like in i3)
-alt-enter = '''exec-and-forget osascript -e '
-tell application "Terminal"
-     do script
-     activate
- end tell'
- '''
+alt-enter = '''exec-and-forget open -na iTerm'''
+# alt-enter = '''exec-and-forget osascript -e '
+# tell application "Terminal"
+#      do script
+#      activate
+#  end tell'
+#  '''
 
 alt-ctrl-shift-f = 'fullscreen'
 alt-ctrl-f = 'layout floating'
@@ -118,20 +119,20 @@ cmd-alt-slash = 'layout tiles horizontal vertical'
 cmd-alt-shift-slash = 'layout accordion horizontal vertical'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
-cmd-left = 'focus left'
-cmd-down = 'focus down'
-cmd-up = 'focus up'
-cmd-right = 'focus right'
+alt-h = 'focus left'
+alt-j = 'focus down'
+alt-k = 'focus up'
+alt-l = 'focus right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move
-cmd-shift-left = 'move left'
-cmd-shift-down = 'move down'
-cmd-shift-up = 'move up'
-cmd-shift-right = 'move right'
+alt-shift-h = 'move left'
+alt-shift-j = 'move down'
+alt-shift-k = 'move up'
+alt-shift-l = 'move right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#resize
-cmd-shift-minus = 'resize smart -50'
-cmd-shift-equal = 'resize smart +50'
+cmd-shift-minus = 'resize smart -200'
+cmd-shift-equal = 'resize smart +200'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
 alt-1 = 'workspace 1'
@@ -146,21 +147,19 @@ alt-8 = 'workspace 8'
 alt-0 = 'workspace 10' 
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
-alt-shift-1 = 'move-node-to-workspace 1 --focus-follows-window'
-alt-shift-2 = 'move-node-to-workspace 2 --focus-follows-window'
-alt-shift-3 = 'move-node-to-workspace 3 --focus-follows-window'
-alt-shift-4 = 'move-node-to-workspace 4 --focus-follows-window'
-alt-shift-5 = 'move-node-to-workspace 5 --focus-follows-window'
-alt-shift-6 = 'move-node-to-workspace 6 --focus-follows-window'
-alt-shift-7 = 'move-node-to-workspace 7 --focus-follows-window'
-alt-shift-8 = 'move-node-to-workspace 8 --focus-follows-window'
-
-#alt-tab = 'workspace-back-and-forth'
-#alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
+# Removing --focus-follows-window
+alt-shift-1 = 'move-node-to-workspace 1'
+alt-shift-2 = 'move-node-to-workspace 2'
+alt-shift-3 = 'move-node-to-workspace 3'
+alt-shift-4 = 'move-node-to-workspace 4'
+alt-shift-5 = 'move-node-to-workspace 5'
+alt-shift-6 = 'move-node-to-workspace 6'
+alt-shift-7 = 'move-node-to-workspace 7'
+alt-shift-8 = 'move-node-to-workspace 8'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 alt-shift-semicolon = 'mode service'
-alt-shift-enter = 'mode apps'
+alt-r = 'mode resize'
 
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -168,7 +167,18 @@ alt-shift-enter = 'mode apps'
 esc = ['reload-config', 'mode main']
 r = ['flatten-workspace-tree', 'mode main'] # reset layout
 f = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
+m = ['workspace 1','layout accordion horizontal vertical','workspace 2','layout accordion horizontal vertical','workspace 3','layout accordion horizontal vertical','workspace 4','layout accordion horizontal vertical','workspace 5','layout accordion horizontal vertical','workspace 6','layout accordion horizontal vertical']
+d = ['workspace 1','layout tiles horizontal vertical','workspace 2','layout tiles horizontal vertical','workspace 3','layout tiles horizontal vertical','workspace 4','layout tiles horizontal vertical','workspace 5','layout tiles horizontal vertical','workspace 6','layout tiles horizontal vertical']
 backspace = ['close-all-windows-but-current', 'mode main']
 
-[mode.apps.binding]
-alt-w = ['exec-and-forget open -a /Applications/WezTerm.app', 'mode main']
+[mode.resize.binding]
+    1 = ['resize width 250','mode main']
+    2 = ['resize width 1000','mode main']
+    3 = ['resize width 2000','mode main']
+    4 = ['resize width 4000','mode main']
+    h = 'resize width -100'
+    j = 'resize height +100'
+    k = 'resize height -100'
+    l = 'resize width +100'
+    enter = 'mode main'
+    esc = 'mode main'
