@@ -103,11 +103,13 @@ setopt HIST_VERIFY
 # ~~~ Bas Config
 
 
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export PATH="${HOME}/bin:${HOMEBREW_PREFIX}/opt/openssl/bin:$PATH"
 
 eval "$(direnv hook zsh)"
 
-[[ -v PS1 ]] && [[ ! -v TMUX ]] && tmux
+# Disable auto tmux for now, my tiling window manager is enough
+#[[ -v PS1 ]] && [[ ! -v TMUX ]] && tmux
 
 # Function to get the current Git branch and remote
 git_info() {
