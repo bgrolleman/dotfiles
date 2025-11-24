@@ -104,6 +104,7 @@ setopt HIST_VERIFY
 
 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+export PATH="${HOME}/Library/Python/3.9/bin:${PATH}"
 export PATH="${HOME}/bin:${HOMEBREW_PREFIX}/opt/openssl/bin:$PATH"
 
 eval "$(direnv hook zsh)"
@@ -144,3 +145,4 @@ EOF
 
 export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
 source ~/.zsh/zsh-vim-mode/zsh-vim-mode.plugin.zsh
+alias k=kubectl

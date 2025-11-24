@@ -19,17 +19,17 @@ return {
           auto_show = true,
         },
       },
+      file_selector = {
+        provider = "telescope",
+        provider_opts = {},
+      },
       sources = {
-        -- Add 'avante' to the list
-        -- NOTE Disbable adding this until I can properly figure it out
-        -- default = { "avante", "lsp", "path", "buffer" },
+        default = { "avante", "lsp", "path", "buffer" },
         providers = {
           avante = {
             module = "blink-cmp-avante",
             name = "Avante",
-            opts = {
-              -- options for blink-cmp-avante
-            },
+            opts = {},
           },
         },
       },

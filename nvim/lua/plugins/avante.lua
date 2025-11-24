@@ -7,15 +7,12 @@ return {
     ---@module 'avante'
     ---@type avante.Config
     opts = {
-      provider = "gpt-4.1",
+      provider = "gpt-5-codex",
       providers = {
-        ["gpt-4.1"] = {
+        ["gpt-5-codex"] = {
           __inherited_from = "openai",
-          model = "gpt-4.1",
-        },
-        ["gpt-4.1-mini"] = {
-          __inherited_from = "openai",
-          model = "gpt-4.1-mini",
+          model = "gpt-5-codex",
+          temperature = 1,
         },
       },
     },
@@ -23,7 +20,7 @@ return {
       "nvim-lua/plenary.nvim",
       "MunifTanjim/nui.nvim",
       --- The below dependencies are optional,
-      "echasnovski/mini.pick", -- for file_selector provider mini.pick
+      "nvim-mini/mini.pick", -- for file_selector provider mini.pick
       "nvim-telescope/telescope.nvim", -- for file_selector provider telescope
       "hrsh7th/nvim-cmp", -- autocompletion for avante commands and mentions
       "ibhagwan/fzf-lua", -- for file_selector provider fzf
