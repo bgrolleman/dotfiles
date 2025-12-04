@@ -1,48 +1,49 @@
 // vim:ts=4:sw=4:et
 {
-    // splith split container with 3 children
-    "border": "normal",
+    "name": "Todoist",
+    "percent": 0.15,
+    "swallows": [
+       {
+         "instance": "^crx_knaiokfnmjjldlfhlioejgcompgenfhb$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "name": "Brave",
+    "percent": 0.60,
+    "swallows": [
+       {
+         "class": "^Brave\\-browser$",
+         "instance": "^brave\\-browser$",
+         "window_role": "^browser$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    // splitv split container with 2 children
+    "border": "pixel",
     "floating": "auto_off",
-    "layout": "splith",
-    "marks": [],
-    "percent": 1,
+    "layout": "splitv",
+    "percent": 0.35,
     "type": "con",
     "nodes": [
         {
-            "border": "none",
-            "current_border_width": 5,
-            "floating": "user_off",
-            "marks": [],
-            "name": "Todoist - Today – Todoist",
-            "percent": 0.20,
+            "name": "Logseq",
+            "percent": 0.5,
             "swallows": [
                {
-               "instance": "^crx_knaiokfnmjjldlfhlioejgcompgenfhb$"
+                 "class": "^Logseq$"
                }
             ],
             "type": "con"
         },
         {
-            "border": "normal",
-            "current_border_width": 2,
-            "floating": "user_off",
-            "marks": [],
-            "name": "i3: Layout saving in i3 - Brave",
-            "percent": 0.60,
-            "swallows": [
-               {
-                "instance": "^brave\\-browser$"
-               }
-            ],
-            "type": "con"
-        },
-        {
-            "border": "normal",
-            "current_border_width": 5,
-            "floating": "auto_off",
-            "marks": [],
-            "name": "bgrolleman@laura: ~",
-            "percent": 0.20,
+            "name": "Terminal",
+            "percent": 0.5,
             "swallows": [
                {
                 "class": "^kitty$"
