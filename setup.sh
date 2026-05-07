@@ -20,11 +20,12 @@ configlink() {
 
 checkdir ~/.config
 link ~/.profile ~/.dotfiles/profile
-link ~/.config/i3 ~/.dotfiles/i3
 
+configlink i3
 configlink tmux
 configlink nvim
 configlink kitty
 configlink polybar
 configlink picom.conf
 configlink niri
+configlink noctalia
