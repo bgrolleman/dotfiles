@@ -15,16 +15,16 @@ link() {
   fi
 }
 configlink() {
-  link ~/.config/$1 ~/dotfiles/$1
+  link ~/.config/$1 ~/.dotfiles/$1
 }
 
 checkdir ~/.config
-link ~/.dotfiles ~/dotfiles
-link ~/.profile ~/dotfiles/profile
-link ~/.config/i3 ~/dotfiles/i3
+link ~/.profile ~/.dotfiles/profile
+link ~/.config/i3 ~/.dotfiles/i3
 
 configlink tmux
 configlink nvim
 configlink kitty
 configlink polybar
 configlink picom.conf
+configlink niri
