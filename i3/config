@@ -2,7 +2,8 @@
 # Bas Grolleman
 
 # Some reason system boots wrong resolution
-exec --no-startup-id ~/bin/set_display_ultrawide
+# exec --no-startup-id ~/bin/set_display_ultrawide
+exec --no-startup-id ~/.screenlayout/dual.sh
 
 # t
 set $mod Mod1 
@@ -53,7 +54,7 @@ bindsym $win+e exec /usr/bin/nautilus /home/bgrolleman
 bindsym $win+b exec /opt/helium/helium
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+Shift+y kill
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec --no-startup-id dmenu_run
@@ -90,7 +91,7 @@ bindsym $mod+y floating enable; resize set 55ppt 95ppt; move position center
 # change container layout (stacked, tabbed, toggle split)
 #bindsym $mod+s layout stacking
 #bindsym $mod+w layout tabbed
-#bindsym $mod+e layout toggle split
+bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+space floating toggle
@@ -110,6 +111,13 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+
+workspace $ws1 output primary
+workspace $ws2 output primary
+workspace $ws3 output primary
+workspace $ws4 output primary
+workspace $ws5 output secondary
+workspace $ws6 output secondary
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -168,8 +176,8 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-bindsym $mod+Right resize grow width 30px
-bindsym $mod+Left resize shrink width 30px
+bindsym $mod+Shift+Right resize grow width 30px
+bindsym $mod+Shift+Left resize shrink width 30px
 
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
@@ -183,10 +191,10 @@ gaps inner 5px
 exec --no-startup-id xset dpms 600
 exec --no-startup-id /usr/bin/blueman-applet
 exec --no-startup-id nitrogen --restore
-exec --no-startup-id greenclip deamon
-exec --no-startup-id flatpak run com.core447.StreamController -b
+#exec --no-startup-id greenclip deamon
+#exec --no-startup-id flatpak run com.core447.StreamController -b
 exec --no-startup-id picom
-exec --no-startup-id ~/bin/stack-v5.3.1-20240731-x86_64.AppImage
+#exec --no-startup-id ~/bin/stack-v5.3.1-20240731-x86_64.AppImage
 
 bindsym $win+period exec flatpak run it.mijorus.smile
 
@@ -194,3 +202,8 @@ bindsym $win+period exec flatpak run it.mijorus.smile
 
 client.focused            #ffff00    #ffff00     #000000  #ffff00    #ffff00
 
+
+# Float Windows
+for_window [class="Ryujinx"] floating enable
+for_window [class="steam"] floating enable
+assign [class="steam"] 4
