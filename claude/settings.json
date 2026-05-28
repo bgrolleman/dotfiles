@@ -1,0 +1,25 @@
+{
+  "theme": "dark",
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "notify-send 'Claude' 'Task complete' --icon=dialog-information 2>/dev/null || true"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "msg=$(jq -r '.message // \"Needs your input\"' 2>/dev/null || echo 'Needs your input'); notify-send 'Claude needs input' \"$msg\" --icon=dialog-question 2>/dev/null || true"
+          }
+        ]
+      }
+    ]
+  }
+}

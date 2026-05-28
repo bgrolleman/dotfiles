@@ -29,3 +29,6 @@ configlink polybar
 configlink picom.conf
 configlink niri
 configlink noctalia
+
+checkdir ~/.claude
+link ~/.claude/settings.json ~/.dotfiles/claude/settings.json
