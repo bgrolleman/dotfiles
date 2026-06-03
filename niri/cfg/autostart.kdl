@@ -2,3 +2,9 @@
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Miscellaneous#spawn-sh-at-startup
 
     spawn-sh-at-startup "qs -c noctalia-shell"
+
+    // Lock screen after 5 min, turn off monitors after 15 min
+    spawn-at-startup "swayidle" "-w"
+        "timeout" "300" "qs -c noctalia-shell ipc call lockScreen lock"
+        "timeout" "900" "niri msg action power-off-monitors"
+        "resume"        "niri msg action power-on-monitors"
