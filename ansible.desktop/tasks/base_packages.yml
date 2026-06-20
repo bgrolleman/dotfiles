@@ -36,9 +36,11 @@
   become: true
   apt:
     name:
-      - flameshot
       - peek
       - obs-studio
+      - grim
+      - satty
+      - slurp
 
 - name: Brave Browser
   become: true
