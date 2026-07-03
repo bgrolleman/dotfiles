@@ -13,8 +13,12 @@ binds {
 
     // ─── Applications ───
     Alt+Return                         hotkey-overlay-title="Open Terminal: Alacritty" { spawn "alacritty"; }
+    Mod+G                              hotkey-overlay-title="Focus: Gmail" { spawn-sh "$HOME/.config/niri/focus-or-launch.sh chrome-fmgjjmmmlfnkbppncabfkddbjimcfncm-Default /opt/helium-browser-bin/helium-wrapper --profile-directory=Default --app-id=fmgjjmmmlfnkbppncabfkddbjimcfncm"; }
+    Mod+W                              hotkey-overlay-title="Focus: WhatsApp" { spawn-sh "$HOME/.config/niri/focus-or-launch.sh chrome-hnpfjngllnobngcgfapefoaidbinmjnm-Default /opt/helium-browser-bin/helium-wrapper --profile-directory=Default --app-id=hnpfjngllnobngcgfapefoaidbinmjnm"; }
+    Mod+D                              hotkey-overlay-title="Focus: Todoist" { spawn-sh "$HOME/.config/niri/focus-or-launch.sh chrome-dlgohinmglaoopaiplliaecdpmnepmga-Default /opt/helium-browser-bin/helium-wrapper --profile-directory=Default --app-id=dlgohinmglaoopaiplliaecdpmnepmga"; }
     //Mod+CTRL+Return                     hotkey-overlay-title="Open App Launcher: noctalia launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
     Alt+Space                          hotkey-overlay-title="Open App Launcher: noctalia launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
+    Alt+Shift+Space                    hotkey-overlay-title="Open Window Search: noctalia launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher windows"; }
     Mod+B                              hotkey-overlay-title="Open Browser: helium" { spawn "helium-browser"; }
     Mod+L                              hotkey-overlay-title="Lock Screen: noctalia lock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
     Mod+Shift+Q                        hotkey-overlay-title="Session Menu: noctalia sessionMenu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
@@ -132,7 +136,6 @@ binds {
     // ─── Modes ───
     Mod+T                               { toggle-window-floating; }
     Mod+F                               { fullscreen-window; }
-    Mod+W                               { toggle-column-tabbed-display; }
 
     // ─── Screenshots ───
     CTRL+Shift+1                        { screenshot; }
