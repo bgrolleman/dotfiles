@@ -12,7 +12,7 @@ input {
     }
 
     touchpad {
-        //tap // Enable tap-to-click
+        tap // Enable tap-to-click
 	dwt
 	scroll-method "two-finger"
 	tap-button-map "left-right-middle"

@@ -347,17 +347,17 @@
         "indicatorThickness": 3,
         "launcherIcon": "",
         "launcherIconColor": "none",
-        "launcherPosition": "end",
-        "launcherUseDistroLogo": false,
+        "launcherPosition": "start",
+        "launcherUseDistroLogo": true,
         "monitors": [
         ],
         "onlySameOutput": true,
         "pinnedApps": [
         ],
-        "pinnedStatic": false,
-        "position": "bottom",
+        "pinnedStatic": true,
+        "position": "left",
         "showDockIndicator": true,
-        "showLauncherIcon": false,
+        "showLauncherIcon": true,
         "sitOnFrame": false,
         "size": 1
     },
