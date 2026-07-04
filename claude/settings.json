@@ -1,5 +1,7 @@
 {
-  "theme": "dark",
+  "permissions": {
+    "defaultMode": "auto"
+  },
   "hooks": {
     "Stop": [
       {
@@ -21,5 +23,46 @@
         ]
       }
     ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "bash \"/home/bgrolleman/.claude/statusline-command.sh\""
+  },
+  "enabledPlugins": {
+    "frontend-design@claude-plugins-official": true,
+    "lua-lsp@claude-plugins-official": true,
+    "ponytail@ponytail": true
+  },
+  "extraKnownMarketplaces": {
+    "ponytail": {
+      "source": {
+        "source": "github",
+        "repo": "DietrichGebert/ponytail"
+      }
+    },
+    "caveman": {
+      "source": {
+        "source": "github",
+        "repo": "juliusbrussee/caveman"
+      }
+    }
+  },
+  "effortLevel": "high",
+  "advisorModel": "opus",
+  "voice": {
+    "enabled": true,
+    "mode": "hold"
+  },
+  "theme": "dark",
+  "agentPushNotifEnabled": true,
+  "skipAutoPermissionPrompt": true,
+  "voiceEnabled": true,
+  "mcpServers": {
+    "comfyui-image-gen": {
+      "command": "/home/bgrolleman/Project/ComfyUI/.venv/bin/python",
+      "args": [
+        "/home/bgrolleman/Project/ComfyUI/mcp_server.py"
+      ]
+    }
   }
 }
