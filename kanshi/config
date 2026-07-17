@@ -1,0 +1,8 @@
+profile ultrawide-hdmi {
+    output "DP-1" mode 5120x1440 position 0,0 scale 1
+    output "HDMI-A-1" mode 1920x1080 position 1600,1440 scale 1
+}
+
+profile ultrawide {
+    output "DP-1" mode 5120x1440 position 0,0 scale 1
+}
