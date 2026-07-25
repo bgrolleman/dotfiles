@@ -60,6 +60,7 @@
         "middleClickCommand": "",
         "middleClickFollowMouse": false,
         "monitors": [
+            "DP-1"
         ],
         "mouseWheelAction": "none",
         "mouseWheelWrap": true,
@@ -149,7 +150,7 @@
                     "hideUnoccupied": false,
                     "iconScale": 0.8,
                     "id": "Workspace",
-                    "labelMode": "index",
+                    "labelMode": "name",
                     "occupiedColor": "secondary",
                     "pillSize": 0.6,
                     "showApplications": false,
@@ -181,6 +182,18 @@
                     "id": "Tray",
                     "pinned": [
                     ]
+                },
+                {
+                    "displayMode": "onhover",
+                    "iconColor": "none",
+                    "id": "Network",
+                    "textColor": "none"
+                },
+                {
+                    "displayMode": "onhover",
+                    "iconColor": "none",
+                    "id": "Bluetooth",
+                    "textColor": "none"
                 },
                 {
                     "hideWhenZero": false,
@@ -475,8 +488,8 @@
         "bluetoothRssiPollIntervalMs": 60000,
         "bluetoothRssiPollingEnabled": false,
         "disableDiscoverability": false,
-        "networkPanelView": "wifi",
-        "wifiDetailsViewMode": "grid"
+        "networkPanelView": "ethernet",
+        "wifiDetailsViewMode": "list"
     },
     "nightLight": {
         "autoSchedule": true,
