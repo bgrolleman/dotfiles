@@ -2,23 +2,36 @@
   "permissions": {
     "defaultMode": "auto"
   },
+  "model": "sonnet",
   "hooks": {
-    "Stop": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "notify-send 'Claude' 'Task complete' --icon=dialog-information 2>/dev/null || true"
-          }
-        ]
-      }
-    ],
     "Notification": [
       {
         "hooks": [
           {
             "type": "command",
             "command": "msg=$(jq -r '.message // \"Needs your input\"' 2>/dev/null || echo 'Needs your input'); notify-send 'Claude needs input' \"$msg\" --icon=dialog-question 2>/dev/null || true"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash '/home/bgrolleman/.claude/hooks/herdr-agent-state.sh' session",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "notify-send 'Claude' 'Task complete' --icon=dialog-information 2>/dev/null || true"
           }
         ]
       }
@@ -30,20 +43,34 @@
   },
   "enabledPlugins": {
     "frontend-design@claude-plugins-official": true,
+    "humanizer@humanizer": true,
     "lua-lsp@claude-plugins-official": true,
-    "ponytail@ponytail": true
+    "ponytail@ponytail": true,
+    "ui-ux-pro-max@ui-ux-pro-max-skill": true
   },
   "extraKnownMarketplaces": {
+    "caveman": {
+      "source": {
+        "source": "github",
+        "repo": "juliusbrussee/caveman"
+      }
+    },
+    "humanizer": {
+      "source": {
+        "source": "github",
+        "repo": "blader/humanizer"
+      }
+    },
     "ponytail": {
       "source": {
         "source": "github",
         "repo": "DietrichGebert/ponytail"
       }
     },
-    "caveman": {
+    "ui-ux-pro-max-skill": {
       "source": {
         "source": "github",
-        "repo": "juliusbrussee/caveman"
+        "repo": "nextlevelbuilder/ui-ux-pro-max-skill"
       }
     }
   },
@@ -59,10 +86,10 @@
   "voiceEnabled": true,
   "mcpServers": {
     "comfyui-image-gen": {
-      "command": "/home/bgrolleman/Project/ComfyUI/.venv/bin/python",
       "args": [
         "/home/bgrolleman/Project/ComfyUI/mcp_server.py"
-      ]
+      ],
+      "command": "/home/bgrolleman/Project/ComfyUI/.venv/bin/python"
     }
   }
 }

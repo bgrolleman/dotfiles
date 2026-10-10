@@ -1,6 +1,7 @@
     window-rule {
         geometry-corner-radius 5 // Set every window radius to 20
         clip-to-geometry true
+        default-floating-position x=10 y=10 relative-to="bottom-left"
     }
 
      // if you use steam you will probably like these
@@ -14,6 +15,12 @@
        match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
        default-floating-position x=10 y=10 relative-to="bottom-right"
        open-focused false
+    }
+
+    window-rule {
+        match title="^Picture-in-picture$"
+        open-floating true
+        default-floating-position x=50 y=50 relative-to="bottom-left"
     }
 
     layer-rule {

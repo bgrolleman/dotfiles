@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-10-10 (cleanup)
+
+- Niri: floating windows open bottom-left by default; Picture-in-picture floats at a fixed offset.
+- Noctalia v4 `settings.json`: move workspaces and system monitor to the right, add taskbar, enable idle.
+- tmux: add per-window agent status indicator, 2s status refresh and a Prefix+Tab window switcher popup.
+- Claude settings: pin model to sonnet, add herdr SessionStart hook, humanizer and ui-ux-pro-max plugins.
+- CLAUDE.md: document claude/fish/kanshi linking, `workspaces.kdl` and the tmux helper script living outside the repo.
+
 ## 2026-10-10
 
 - Fix niri login: Mod+T bind had three actions, niri rejected the config and fell back to defaults (no bar, no kanshi).

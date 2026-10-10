@@ -87,6 +87,22 @@
                     "id": "Clock",
                     "tooltipFormat": "HH:mm ddd, MMM dd",
                     "useCustomFont": false
+                },
+                {
+                    "compactMode": false,
+                    "hideMode": "hidden",
+                    "hideWhenIdle": true,
+                    "id": "MediaMini",
+                    "maxWidth": 500,
+                    "panelShowAlbumArt": true,
+                    "scrollingMode": "hover",
+                    "showAlbumArt": true,
+                    "showArtistFirst": true,
+                    "showProgressRing": true,
+                    "showVisualizer": false,
+                    "textColor": "none",
+                    "useFixedWidth": false,
+                    "visualizerType": "linear"
                 }
             ],
             "left": [
@@ -99,6 +115,42 @@
                     "iconColor": "none",
                     "id": "Launcher",
                     "useDistroLogo": false
+                },
+                {
+                    "colorizeIcons": false,
+                    "hideMode": "hidden",
+                    "iconScale": 0.8,
+                    "id": "Taskbar",
+                    "maxTaskbarWidth": 40,
+                    "onlyActiveWorkspaces": true,
+                    "onlySameOutput": true,
+                    "showPinnedApps": false,
+                    "showTitle": true,
+                    "smartWidth": true,
+                    "titleWidth": 120
+                }
+            ],
+            "right": [
+                {
+                    "characterCount": 2,
+                    "colorizeIcons": false,
+                    "emptyColor": "secondary",
+                    "enableScrollWheel": true,
+                    "focusedColor": "primary",
+                    "followFocusedScreen": false,
+                    "fontWeight": "bold",
+                    "groupedBorderOpacity": 1,
+                    "hideUnoccupied": true,
+                    "iconScale": 0.8,
+                    "id": "Workspace",
+                    "labelMode": "name",
+                    "occupiedColor": "secondary",
+                    "pillSize": 0.6,
+                    "showApplications": true,
+                    "showApplicationsHover": false,
+                    "showBadge": true,
+                    "showLabelsOnlyWhenOccupied": true,
+                    "unfocusedIconsOpacity": 1
                 },
                 {
                     "compactMode": true,
@@ -122,56 +174,6 @@
                     "useMonospaceFont": true,
                     "usePadding": false
                 },
-                {
-                    "compactMode": false,
-                    "hideMode": "hidden",
-                    "hideWhenIdle": false,
-                    "id": "MediaMini",
-                    "maxWidth": 145,
-                    "panelShowAlbumArt": true,
-                    "scrollingMode": "hover",
-                    "showAlbumArt": true,
-                    "showArtistFirst": true,
-                    "showProgressRing": true,
-                    "showVisualizer": false,
-                    "textColor": "none",
-                    "useFixedWidth": false,
-                    "visualizerType": "linear"
-                },
-                {
-                    "characterCount": 2,
-                    "colorizeIcons": false,
-                    "emptyColor": "secondary",
-                    "enableScrollWheel": true,
-                    "focusedColor": "primary",
-                    "followFocusedScreen": false,
-                    "fontWeight": "bold",
-                    "groupedBorderOpacity": 1,
-                    "hideUnoccupied": false,
-                    "iconScale": 0.8,
-                    "id": "Workspace",
-                    "labelMode": "name",
-                    "occupiedColor": "secondary",
-                    "pillSize": 0.6,
-                    "showApplications": false,
-                    "showApplicationsHover": false,
-                    "showBadge": true,
-                    "showLabelsOnlyWhenOccupied": true,
-                    "unfocusedIconsOpacity": 1
-                },
-                {
-                    "colorizeIcons": false,
-                    "hideMode": "visible",
-                    "id": "ActiveWindow",
-                    "maxWidth": 350,
-                    "scrollingMode": "hover",
-                    "showIcon": true,
-                    "showText": true,
-                    "textColor": "none",
-                    "useFixedWidth": true
-                }
-            ],
-            "right": [
                 {
                     "blacklist": [
                     ],
@@ -453,7 +455,7 @@
     },
     "idle": {
         "customCommands": "[]",
-        "enabled": false,
+        "enabled": true,
         "fadeDuration": 5,
         "lockCommand": "",
         "lockTimeout": 660,
@@ -463,7 +465,7 @@
         "screenOffCommand": "",
         "screenOffTimeout": 600,
         "suspendCommand": "",
-        "suspendTimeout": 1800
+        "suspendTimeout": 0
     },
     "location": {
         "analogClockInCalendar": false,
@@ -488,7 +490,7 @@
         "bluetoothRssiPollIntervalMs": 60000,
         "bluetoothRssiPollingEnabled": false,
         "disableDiscoverability": false,
-        "networkPanelView": "ethernet",
+        "networkPanelView": "wifi",
         "wifiDetailsViewMode": "list"
     },
     "nightLight": {
