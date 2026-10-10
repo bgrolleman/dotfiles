@@ -1,0 +1,56 @@
+# Ported from the old settings.json (noctalia-shell 4.x). Unlisted keys use defaults.
+
+[theme]
+mode    = "dark"
+source  = "builtin"
+builtin = "Catppuccin"
+
+[wallpaper]
+enabled             = true
+fill_mode           = "crop"
+transition          = ["fade", "disc", "stripes", "wipe", "honeycomb"]
+transition_duration = 1500
+directory           = "/home/bgrolleman/Documents/Resources/Backgrounds"
+
+[weather]
+enabled = true
+unit    = "celsius"
+
+[location]
+address = "Amersfoort, The Netherlands"
+
+[idle.behavior.lock]
+timeout = 660
+action  = "lock"
+enabled = true
+
+[idle.behavior.screen-off]
+timeout = 600
+action  = "screen_off"
+enabled = true
+
+[dock]
+enabled   = true
+position  = "left"
+auto_hide = true
+
+[bar.main]
+position           = "top"
+background_opacity = 0.93
+capsule            = true
+margin_ends        = 4
+margin_edge        = 4
+widget_spacing     = 6
+
+start  = ["launcher", "taskbar"]
+center = ["clock", "media"]
+end    = ["workspaces", "tray", "network", "bluetooth", "notifications", "battery", "volume", "brightness", "control-center"]
+
+[widget.clock]
+format         = "{:%H:%M %a, %b %d}"
+tooltip_format = "{:%H:%M %a, %b %d}"
+
+# 70% of the 5120px ultrawide: (5120 - 3584) / 2
+[bar.main.monitor.ultrawide]
+match       = "DP-1"
+margin_ends = 768

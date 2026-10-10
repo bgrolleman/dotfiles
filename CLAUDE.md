@@ -40,7 +40,8 @@ This installs ansible if missing, then runs the playbook. Tasks are split by cat
 Edit the relevant split file, not `config.kdl` itself.
 
 ### Noctalia (desktop shell / bar)
-All settings live in `noctalia/settings.json` (JSON, edited by the Noctalia GUI or directly). Colorschemes are in `noctalia/colorschemes/` and plugins in `noctalia/plugins/`.
+Runs **Noctalia v5** (`noctalia`, native). Config is `noctalia/config.toml` (TOML, hot-reloaded); validate with `noctalia config validate`.
+`noctalia/settings.json` is the legacy v4 config. See `docs/noctalia-v5.md` for details and `CHANGELOG.md` for history.
 
 ### Neovim
 Uses **LazyVIM** framework. Entry point is `nvim/init.lua` which bootstraps lazy.nvim via `nvim/lua/config/lazy.lua`.
