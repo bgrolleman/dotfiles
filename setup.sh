@@ -44,6 +44,7 @@ configlink picom.conf
 configlink niri
 configlink noctalia
 configlink kanshi
+configlink hypr
 
 checkdir ~/.claude
 link ~/.claude/settings.json ~/.dotfiles/claude/settings.json

@@ -27,7 +27,11 @@ This installs ansible if missing, then runs the playbook. Tasks are split by cat
 
 ## Architecture
 
-### Niri (Wayland compositor)
+### Hyprland (Wayland compositor, current)
+Single Lua config: `hypr/hyprland.lua` (Hyprland 0.56+, API stubs in `/usr/share/hypr/stubs/hl.meta.lua`). Apply with `hyprctl reload`, check `hyprctl configerrors`.
+Workspaces 1–5 are pinned to DP-1, 6 to HDMI-A-1. Startup apps are placed per workspace by window class rules.
+
+### Niri (Wayland compositor, previous)
 `niri/config.kdl` is just includes — the real config lives in `niri/cfg/`:
 - `input.kdl` — keyboard/mouse/touchpad settings
 - `keybinds.kdl` — all keybindings
